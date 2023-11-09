@@ -86,5 +86,6 @@ describe('getData', () => {
         const data = await getData();
         expect(axios.get).toBeCalledTimes(1);
         expect(data).toEqual(['1', '2', '3']);
+        expect(data).toMatchSnapshot();
     })
 })
